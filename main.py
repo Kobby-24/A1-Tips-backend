@@ -10,7 +10,9 @@ app = FastAPI()
 origin = [
     "http://localhost:3000",
     "http://localhost:8000",
-    "https://coral-app-l62hg.ondigitalocean.app"
+    "https://coral-app-l62hg.ondigitalocean.app",
+    "https://a1-tips.vercel.app"
+
 ]
 
 app.add_middleware(
