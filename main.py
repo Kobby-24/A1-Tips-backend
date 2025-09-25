@@ -10,6 +10,7 @@ app = FastAPI()
 origin = [
     "http://localhost:3000",
     "http://localhost:8000",
+    "https://coral-app-l62hg.ondigitalocean.app"
 ]
 
 app.add_middleware(
