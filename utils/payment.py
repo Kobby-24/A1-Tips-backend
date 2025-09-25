@@ -156,8 +156,7 @@ async def record_payment_event(email: str, db: Session, booking_id, reference):
 
 async def verify_payment(reference: str, db: Session = Depends(get_db)):
     headers = {
-        "Authorization": "Bearer " + os.getenv("PAYSTACK_SK"),
-        "Content-Type": "application/json",
+        "Authorization": "Bearer sk_live_abe69c578837a5f641744da6d1f6ed25df915383"
     }
     url = f"https://api.paystack.co/transaction/verify/{reference}"
     response = requests.get(url, headers=headers)
