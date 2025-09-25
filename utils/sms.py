@@ -1,9 +1,10 @@
 import requests
+import os
 from models import User
 
 def send_sms(recipient:list, message:str):
     endPoint = 'https://api.mnotify.com/api/sms/quick'
-    apiKey = 'JKYSiTuEvlc3q5XU5HAvEb8Kp'
+    apiKey = os.getenv("MNOTIFY_API_KEY")
     url = endPoint + '?key=' + apiKey
 
     data = {
